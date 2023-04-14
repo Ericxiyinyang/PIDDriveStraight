@@ -26,4 +26,9 @@ class Drivetrain:
         self.lEncoder.reset()
         self.rEncoder.reset()
 
+    def getAvgDistanceTravelled(self):
+        totalTravelled = self.lEncoder.getDistance() + self.rEncoder.getDistance()
+        #convert to decimal precision
+        return totalTravelled/2.0
+
 
