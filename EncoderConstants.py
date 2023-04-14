@@ -1,3 +1,5 @@
+import math
+
 class EncoderConstants:
-    distancePerTick = 40/100
+    distancePerTick = (math.pi * 0.07)/12
     intendedDistance = 2.0
