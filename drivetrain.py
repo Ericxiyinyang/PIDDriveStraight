@@ -13,7 +13,7 @@ class Drivetrain:
         self.rEncoder.setDistancePerPulse(EC.distancePerTick)
         self.drivetrain = drive.DifferentialDrive(self.lMotor, self.rMotor)
 
-    def move(self, forward, rotate):
+    def move(self, rotate, forward):
         self.drivetrain.arcadeDrive(rotate, forward)
 
     def getLEncoderDistance(self):
