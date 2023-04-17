@@ -1,6 +1,6 @@
 # ROMI Straight Autonomous Project
 *By Eric Yang and Jayden Dai*
-
+## THIS IS THE UNSTABLE PROP-CONTROL BRANCH
 ## Introduction
 This project aims to code the ROMI robot to operate under basic teleop and drive automatically in autonomous. The ROMI's autonomous mode should drive the robot as straight as possible, for an intended distance. How long & fast the robot should go can be tweaked via changing the EncoderConstants.py file.
 
