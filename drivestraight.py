@@ -6,16 +6,20 @@ class StraightDriver:
         self.drivetrain = drivetrain
 
     def run(self):
-        if self.drivetrain.getAvgDistanceTravelled() == EC.intendedDistance:
+        if self.drivetrain.getAvgDistanceTravelled() >= EC.intendedDistance:
+            print("STOPPED MOVING")
             return
 
         lTravel = self.drivetrain.getLEncoderDistance()
         rTravel = self.drivetrain.getREncoderDistance()
+        print(f"Left traveled:{lTravel}, Right traveled:{rTravel}, Avg traveled:{self.drivetrain.getAvgDistanceTravelled()}")
         if lTravel == rTravel:
             self.drivetrain.move(0, MC.forwardAmount)
         elif lTravel > rTravel:
-            self.drivetrain.move(MC.rotateAmount, MC.forwardAmount)
+            print("LGREATER")
+            self.drivetrain.move(MC.invRotateAmount, MC.forwardAmount)
         elif lTravel < rTravel:
-            self.drivetrain.move(-MC.rotateAmount, MC.forwardAmount)
+            print("RGREATER")
+            self.drivetrain.move(MC.rotateAmount, MC.forwardAmount)
 
 
