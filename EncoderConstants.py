@@ -10,3 +10,5 @@ class MotorConstants:
     forwardAmount = 0.5
     rotateAmount = 0.1355
     invRotateAmount = -0.1355
+    PropRotationConstant = -20
+    GyroRotationCorrectionConstant = -1/25

@@ -15,6 +15,7 @@ class StraightRobot(wp.TimedRobot):
 
     def autonomousInit(self):
         self.drivetrain.zeroEncoders()
+        self.drivetrain.resetGyro()
 
     def autonomousPeriodic(self):
         self.autodriver.run()
