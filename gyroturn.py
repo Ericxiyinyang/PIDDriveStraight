@@ -14,4 +14,5 @@ class GyroTurn:
             return
         else:
             power = error * self.kp
+            power = max(-0.5, min(0.5, power))
             self.drivetrain.move(power, 0)
