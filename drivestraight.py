@@ -1,7 +1,8 @@
 from EncoderConstants import EncoderConstants as EC
 from EncoderConstants import MotorConstants as MC
+from autoroutine import AutoRoutine
 
-class StraightDriver:
+class StraightDriver(AutoRoutine):
     def __init__(self, drivetrain):
         self.drivetrain = drivetrain
         self.kp = MC.PropRotationConstant

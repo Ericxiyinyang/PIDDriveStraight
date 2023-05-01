@@ -1,9 +1,10 @@
 from drivetrain import Drivetrain as DT
 from EncoderConstants import MotorConstants as MC
 from wpimath.controller import PIDController
+from autoroutine import AutoRoutine
 
 
-class GyroTurn:
+class GyroTurn(AutoRoutine):
     def __init__(self, drivetrain: DT, goal: float):
         self.drivetrain = drivetrain
         self.goal = goal

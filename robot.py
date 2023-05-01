@@ -7,6 +7,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 from robotcontainer import RobotContainer
+from autoroutine import AutoRoutine
 
 class StraightRobot(wp.TimedRobot):
     def robotInit(self):
@@ -20,7 +21,7 @@ class StraightRobot(wp.TimedRobot):
         self.container.drivetrain.resetGyro()
         self.auto = self.container.get_autonomous()
 
-    def autonomousPeriodic(self):
+    def autonomousPeriodic(self) -> AutoRoutine:
         self.auto.run()
 
 
