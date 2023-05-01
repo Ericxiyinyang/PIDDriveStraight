@@ -10,16 +10,16 @@ class GyroTurn(AutoRoutine):
         self.goal = goal
         self.tolerance = 3
         self.pid_controller = PIDController(
-            MC.GyroRotationCorrectionConstant,
-            MC.GyroIntegralRotationCorrectionConstant,
-            MC.GyroDerivativeRotationCorrectionConstant
+            MC.RotationCorrectionConstant,
+            MC.IntegralRotationCorrectionConstant,
+            MC.DerivativeRotationCorrectionConstant
         )
         self.pid_controller.setSetpoint(self.goal)
         self.pid_controller.setTolerance(self.tolerance)
         self.pid_controller.setIntegratorRange(-.3, .3)
         #self.kp = MC.GyroRotationCorrectionConstant
         #self.ki = MC.GyroIntegralRotationCorrectionConstant
-        self.total_error = 0
+        #self.total_error = 0
 
     def run(self):
         current_reading = self.drivetrain.getGyroAngleZ()
