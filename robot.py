@@ -3,9 +3,6 @@ from wpilib import Joystick, Spark, Encoder
 from drivetrain import Drivetrain
 from drivestraight import StraightDriver
 import os
-import tkinter as tk
-from tkinter import *
-from tkinter import ttk
 from robotcontainer import RobotContainer
 from autoroutine import AutoRoutine
 
@@ -39,8 +36,3 @@ if __name__ == "__main__":
     os.environ["HALSIMWS_HOST"] = "10.0.0.2"
     os.environ["HALSIMWS_PORT"] = "3300"
     wp.run(StraightRobot)
-    window = tk.Tk()
-    label = tk.Label(text="Python rocks!")
-    label.pack()
-
-    window.mainloop()
